@@ -1,4 +1,4 @@
-# 📝 CLI To-Do App  Author by HAMZA ARSHAD NAGRA USING GEMINI CLI ON GOOGLE CLOUD-SHELL ENVIRO. 
+# 📝 PYTHON CLI To-Do App  Author by HAMZA ARSHAD NAGRA USING GEMINI CLI ON GOOGLE CLOUD-SHELL ENVIRO. 
 
 A clean, fast, and beginner-friendly **Command Line To‑Do application** built with **Python** and **SQLite**. Manage your daily tasks directly from the terminal with a colorful, intuitive interface and persistent storage.
 
@@ -44,58 +44,77 @@ todo-cli/
 ├── tasks.db     # SQLite database (auto-created)
 └── README.md    # Project documentation
 ```
-## Application Navigation Map
+## 🗺️ Application Navigation Map
 
 The application starts at the Main Menu. From there, the user can access various features, including a dedicated sub-menu for listing and searching tasks.
 
-▶️ Main Menu
-    │
-    ├── 1. Add Task
-    │      - Prompts for: Title, Description, Priority, Due Date
-    │      - Returns to Main Menu
-    │
-    ├── 2. List / Search tasks
-    │      │
-    │      └─▶️ List/Search Sub-Menu
-    │          │
-    │          ├── 1. Show all tasks
-    │          │      - Displays a detailed list of all tasks
-    │          │      - Returns to List/Search Sub-Menu
-    │          │
-    │          ├── 2. Show pending tasks
-    │          │      - Displays only "Not Done" tasks
-    │          │      - Returns to List/Search Sub-Menu
-    │          │
-    │          ├── 3. Show completed tasks
-    │          │      - Displays only "Done" tasks
-    │          │      - Returns to List/Search Sub-Menu
-    │          │
-    │          ├── 4. Search tasks by keyword
-    │          │      - Prompts for a keyword
-    │          │      - Displays matching tasks
-    │          │      - Returns to List/Search Sub-Menu
-    │          │
-    │          └── 0. Back to main menu
-    │                 - Returns to Main Menu
-    │
-    ├── 3. Mark task complete / incomplete
-    │      - Shows a summary list of tasks
-    │      - Prompts for a Task ID to toggle its status
-    │      - Returns to Main Menu
-    │
-    ├── 4. Update task
-    │      - Shows a summary list of tasks
-    │      - Prompts for a Task ID to update
-    │      - Prompts for new details (Title, Description, Priority)
-    │      - Returns to Main Menu
-    │
-    ├── 5. Delete task
-    │      - Shows a summary list of tasks
-    │      - Prompts for a Task ID to delete
-    │      - Returns to Main Menu
-    │
-    └── 0. Exit
-           - Saves all data and closes the application.
+APPLICATION FLOW DIAGRAM
+========================
+
+MAIN MENU
+│
+├── [1] Add Task
+│     │
+│     ├─ Prompt: Title
+│     ├─ Prompt: Description
+│     ├─ Prompt: Priority
+│     ├─ Prompt: Due Date
+│     │
+│     └─ Return to Main Menu
+│
+├── [2] List / Search Tasks
+│     │
+│     └── List / Search Sub-Menu
+│          │
+│          ├── [1] Show All Tasks
+│          │     ├─ Display all tasks (detailed view)
+│          │     └─ Return to List/Search Sub-Menu
+│          │
+│          ├── [2] Show Pending Tasks
+│          │     ├─ Display tasks marked "Not Done"
+│          │     └─ Return to List/Search Sub-Menu
+│          │
+│          ├── [3] Show Completed Tasks
+│          │     ├─ Display tasks marked "Done"
+│          │     └─ Return to List/Search Sub-Menu
+│          │
+│          ├── [4] Search Tasks by Keyword
+│          │     ├─ Prompt for keyword
+│          │     ├─ Search title & description
+│          │     └─ Return to List/Search Sub-Menu
+│          │
+│          └── [0] Back to Main Menu
+│                └─ Return to Main Menu
+│
+├── [3] Mark Task Complete / Incomplete
+│     │
+│     ├─ Show summarized task list
+│     ├─ Prompt for Task ID
+│     ├─ Toggle task status (Done / Not Done)
+│     │
+│     └─ Return to Main Menu
+│
+├── [4] Update Task
+│     │
+│     ├─ Show summarized task list
+│     ├─ Prompt for Task ID
+│     ├─ Update: Title / Description / Priority
+│     │
+│     └─ Return to Main Menu
+│
+├── [5] Delete Task
+│     │
+│     ├─ Show summarized task list
+│     ├─ Prompt for Task ID
+│     ├─ Confirm and delete task
+│     │
+│     └─ Return to Main Menu
+│
+└── [0] Exit
+      │
+      ├─ Save all changes to database
+      └─ Close application safely
+
 
 
 ### 🔹 Layer Responsibilities
