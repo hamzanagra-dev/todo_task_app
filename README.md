@@ -48,6 +48,7 @@ todo-cli/
 
 The application starts at the Main Menu. From there, the user can access various features, including a dedicated sub-menu for listing and searching tasks.
 
+```text
 APPLICATION FLOW DIAGRAM
 ========================
 
@@ -114,6 +115,8 @@ MAIN MENU
       │
       ├─ Save all changes to database
       └─ Close application safely
+
+```
 
 
 
