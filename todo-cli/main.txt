@@ -1,0 +1,32 @@
+# main.py
+# A clean, well-structured, and beginner-friendly Command Line Todo application.
+
+# Import the modules that contain the application logic
+import storage
+import tasks
+
+# --- Main Application Logic ---
+
+    It contains the main loop that drives the user interface.
+    """
+    # Load existing tasks from the file at the start
+    all_tasks = storage.load_tasks()
+
+    while True:
+        display_menu()
+        choice = input("Choose an option: ")
+
+        if choice == '1':
+            tasks.add_task(all_tasks)
+        elif choice == '2':
+            tasks.list_tasks(all_tasks)
+        elif choice == '3':
+            tasks.toggle_task_status(all_tasks)
+        elif choice == '4':
+            tasks.update_task(all_tasks)
+        elif choice == '5':
+            tasks.delete_task(all_tasks)
+        elif choice == '0':
+            print("Goodbye!")
+            # No need to save here if we save after every modification
+
