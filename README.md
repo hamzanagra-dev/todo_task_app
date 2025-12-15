@@ -44,6 +44,23 @@ todo-cli/
 ├── tasks.db     # SQLite database (auto-created)
 └── README.md    # Project documentation
 ```
+
+### 🔹 Layer Responsibilities
+
+- **main.py (Presentation Layer)**
+  - Displays menus
+  - Handles user input
+  - Controls app flow
+
+- **tasks.py (Business Logic Layer)**
+  - Defines what a task is
+  - Implements add, update, delete, filter, and search logic
+
+- **storage.py (Data Access Layer)**
+  - Handles all SQLite operations
+  - Keeps database logic isolated from the rest of the app
+
+---
 ## 🗺️ Application Navigation Map
 
 The application starts at the Main Menu. From there, the user can access various features, including a dedicated sub-menu for listing and searching tasks.
@@ -117,24 +134,6 @@ MAIN MENU
       └─ Close application safely
 
 ```
-
-
-
-### 🔹 Layer Responsibilities
-
-- **main.py (Presentation Layer)**
-  - Displays menus
-  - Handles user input
-  - Controls app flow
-
-- **tasks.py (Business Logic Layer)**
-  - Defines what a task is
-  - Implements add, update, delete, filter, and search logic
-
-- **storage.py (Data Access Layer)**
-  - Handles all SQLite operations
-  - Keeps database logic isolated from the rest of the app
-
 ---
 
 ## 💾 Data Storage & Persistence
